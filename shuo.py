@@ -17,7 +17,7 @@ def old_text(temperature):
 	data_old = file_r.read()
 	file_r.close( )
 	log_text = str(temperature)
-	file_object = open('log.txt','w')
+	file_object = open('/home/pi/shuo/log.txt','w')
 	file_object.write(log_text)
 	file_object.close()
 	if(temperature>int(data_old)):
