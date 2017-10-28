@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
 import time
-import qqlib
+import qq
 import urllib
 import os
 channel = 18
@@ -88,7 +88,7 @@ s="【温度自动播报】当前室内温度为："+str(temperature)+"℃ （�
 file_object1 = open('/home/pi/shuo/t.txt','w')
 file_object1.write(s)
 file_object1.close()
-qq = qqlib.QQ(QQnum, QQpass)
+qq = qq.QQ(QQnum, QQpass)
 qq.feed(s)
 os.system("python weibo/weibo.py "+weiboUm+" "+weiboPass)
 print(s)
